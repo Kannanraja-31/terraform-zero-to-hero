@@ -13,11 +13,14 @@ provider "aws" {
 variable "demo_ami" {
   description = "just for demo"
 }
+locals {
+  region="us-east-1"
+}
 
 resource "aws_instance" "example" {
   ami           = var.demo_ami
   instance_type = "t3.micro"
-
+  region = local.region
   tags = {
     Name = "HelloWorld"
   }

@@ -1,0 +1,1 @@
+demo_ami="ami-02d26659fd89"
